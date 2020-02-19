@@ -9605,7 +9605,7 @@ ERROR_STATUS Car_SM_Update(void)
 	case MOT_BCK_DIR:
 		au8_Ret |= Steering_SteerCar(CAR_BACKWARD, MOT_SPEED_PERCENTAGE);
     3e34:	82 e0       	ldi	r24, 0x02	; 2
-    3e36:	6e e1       	ldi	r22, 0x1E	; 30
+    3e36:	63 e2       	ldi	r22, 0x23	; 35
     3e38:	0e 94 11 1e 	call	0x3c22	; 0x3c22 <Steering_SteerCar>
     3e3c:	98 2f       	mov	r25, r24
     3e3e:	8b 81       	ldd	r24, Y+3	; 0x03
@@ -9620,7 +9620,7 @@ ERROR_STATUS Car_SM_Update(void)
 		/* In case the motors are to be driven rotationally */
 		au8_Ret |= Steering_SteerCar(CAR_RIGHT, MOT_SPEED_PERCENTAGE);
     3e4a:	83 e0       	ldi	r24, 0x03	; 3
-    3e4c:	6e e1       	ldi	r22, 0x1E	; 30
+    3e4c:	63 e2       	ldi	r22, 0x23	; 35
     3e4e:	0e 94 11 1e 	call	0x3c22	; 0x3c22 <Steering_SteerCar>
     3e52:	9b 81       	ldd	r25, Y+3	; 0x03
     3e54:	89 2b       	or	r24, r25
@@ -9639,7 +9639,7 @@ ERROR_STATUS Car_SM_Update(void)
 		/* In case the motors are to be driven forwards */
 		au8_Ret |= Steering_SteerCar(CAR_FORWARD, MOT_SPEED_PERCENTAGE);
     3e68:	81 e0       	ldi	r24, 0x01	; 1
-    3e6a:	6e e1       	ldi	r22, 0x1E	; 30
+    3e6a:	63 e2       	ldi	r22, 0x23	; 35
     3e6c:	0e 94 11 1e 	call	0x3c22	; 0x3c22 <Steering_SteerCar>
     3e70:	9b 81       	ldd	r25, Y+3	; 0x03
     3e72:	89 2b       	or	r24, r25

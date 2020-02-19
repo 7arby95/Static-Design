@@ -22,7 +22,7 @@
 #define		MOT_TURN_DELAY			125
 #define		MOT_DELAY				125
 
-#define		MOT_SPEED_PERCENTAGE	30
+#define		MOT_SPEED_PERCENTAGE	35
 
 #define		MOT_MIN_DISTANCE		25
 #define		MOT_MAX_DISTANCE		45
