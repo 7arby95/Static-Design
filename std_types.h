@@ -19,14 +19,13 @@ typedef unsigned char uint8_t;
 typedef unsigned int uint16_t;
 typedef unsigned long int uint32_t;
 typedef unsigned long long uint64_t;
-typedef char sint8_t;
-typedef short sint16_t;
-typedef long sint32_t;
-typedef long long sint64_t;
+typedef signed char sint8_t;
+typedef signed int sint16_t;
+typedef signed long int sint32_t;
+typedef signed long long sint64_t;
 typedef volatile uint8_t* const reg_type8_t;
 typedef volatile uint16_t* const reg_type16_t;
-typedef uint8_t bool;
-typedef bool ERROR_STATUS;
+typedef unsigned char bool;
 
 /************************************************************************/
 /*				 		defining boolean values                         */
@@ -34,14 +33,21 @@ typedef bool ERROR_STATUS;
 #define FALSE 	0	// defines boolean false
 #define TRUE 	1	// defines boolean true
 
-#define E_OK	0	// defines boolean ok
-#define E_NOK	1	// defines boolean not ok
-
 
 /************************************************************************/
 /*						 LOW/HIGH defines                               */
 /************************************************************************/
 #define LOW  0		// defines LOW value for a bit
 #define HIGH 0xFF	// defines HIGH value for a bit
+#define ZERO (0)
+#define NO_ERROR (0)
 
+#define INPUT 0
+#define OUTPUT 0xFF
+/************************************************************************/
+/*				STATUS DEFINES                                          */
+/************************************************************************/
+typedef sint8_t ERROR_STATUS;
+#define E_OK   (0)
+#define E_NOK   (1)
 #endif /* STD_TYPES_H_ */
